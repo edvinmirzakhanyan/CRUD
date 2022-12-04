@@ -86,6 +86,8 @@ std::vector<std::string> split(const std::string& str) {
 void create(const std::string& str) {
     User obj;
     std::vector<std::string> vec = split(str);
+    
+    if (vec.size() < 2) { std::cout << "Wrong command!" << std::endl; return; }
     if (vec[1] != "user") { std::cout << "Command " << vec[1] << " not found!" << std::endl; return; }
     if (vec.size() > 2) { std::cout << "Command " << vec[2] << " not found!" << std::endl; return; }
     do {
