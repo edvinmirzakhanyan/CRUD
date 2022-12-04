@@ -120,6 +120,8 @@ void create(const std::string& str) {
 
 void read(const std::string& str) {
     std::vector<std::string> vec = split(str);
+    
+    if (vec.size() < 5) { std::cout << "Wrong command!" << std::endl; return; }
     if (vec[1] != "users") { std::cout << "Command " << vec[1] << " not found!" << std::endl; return; }
     if (vec[2] != "where") { std::cout << "Command " << vec[2] << " not found!" << std::endl; return; }
     if (vec.size() > 5) { std::cout << "Command" << vec[5] << " not found!"; return; }
@@ -202,7 +204,8 @@ void read(const std::string& str) {
 
 void update(const std::string& str) {
     std::vector<std::string> vec = split(str);
-
+    
+    if (vec.size() < 8) { std::cout << "Wrong command!" << std::endl; return;
     if (vec[1] != "users") { std::cout << "Command " << vec[1] << " not found!" << std::endl; return; }
     if (vec[2] != "set")   { std::cout << "Command " << vec[2] << " not found!" << std::endl; return; }
     if (vec[5] != "where") { std::cout << "Command " << vec[5] << " not found!" << std::endl; return; }
@@ -347,7 +350,8 @@ void update(const std::string& str) {
 
 void _delete(const std::string& str) {
     std::vector<std::string> vec = split(str);
-
+    
+    if (vec.size() < 5) { std::cout << "Wrong command!" << std::endl; return; }
     if (vec[1] != "users") { std::cout << "Command " << vec[1] << " not found!" << std::endl; return; }
     if (vec[2] != "where")   { std::cout << "Command " << vec[2] << " not found!" << std::endl; return; }
     if (vec.size() > 5) { std::cout << "Command " << vec[5] << " not found!" << std::endl; return; }
